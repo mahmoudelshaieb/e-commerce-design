@@ -1,0 +1,30 @@
+[
+    {
+        "id": "0",
+        "img": "../img/t.jpg",
+        "desc": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "oldPrice": "548",
+        "currentPrice": "1"
+    },
+    {
+        "id": "1",
+        "img": "../img/t.jpg",
+        "desc": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "oldPrice": "548",
+        "currentPrice": "2"
+    },
+    {
+        "id": "2",
+        "img": "../img/t.jpg",
+        "desc": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "oldPrice": "548",
+        "currentPrice": "3"
+    },
+    {
+        "id": "3",
+        "img": "../img/t.jpg",
+        "desc": "Some quick example text to build on the card title and make up the bulk of the card's content.",
+        "oldPrice": "548",
+        "currentPrice": "4"
+    }
+]
