@@ -1,4 +1,4 @@
-    <!-- secondary nav -->
+  <!-- secondary nav -->
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm custom-top-nav">
     <div class="container">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -45,9 +45,6 @@
           </div>
     </div>
   </nav>
-
-  
-  
   <!-- Modal for login and register -->
   <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog" role="document">
@@ -157,39 +154,28 @@
         <div class="row align-items-baseline">
             <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
                 <a class="logo" href="">
-                    <img class="img-fluid" src="img/logo.png" alt="logo">
+                    <img class="img-fluid mb-4" src="img/logo.png" alt="logo">
                 </a>
             </div>
-            <div class="col-sm-12 col-md-8 col-lg-8 col-xl-8">
+            <div class="col-sm-12 col-md-7 col-lg-7 col-xl-7">
               <form class="search">
-                  <input class="form-control mr-sm-2 px-4 rounded-pill" type="search" placeholder="Search Here..." aria-label="Search">
+                  <input class="form-control mr-sm-2 px-4 rounded-pill  mb-4" type="search" placeholder="Search Here..." aria-label="Search">
                   <button class="btn btn-success my-2 my-sm-0 px-4 position-absolute rounded-pill" type="submit"><i class="fas fa-search"></i></button>
               </form>
           </div>
-          <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
-              <div class="cart">
-                <div data-toggle="dropdown" data-hover="dropdown" class="basket dropdown-toggle">
-                    <a href="#">
-                        <i class="glyphicon glyphicon-shopping-cart"></i>
-                        <div class="cart-box">
-                            <span class="title">View Cart</span>
-                            <span id="cart-total">0</span>
-                        </div>
-                    </a>
-                </div>
-                
+          <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
+              <div class="cart-control position-relative py-2 px-2 ml-4 text-center">
+                <a href="#" class="text-white font-weight-bold"><i class="fas fa-shopping-cart pl-2"></i>Veiw Cart</a>
+                <span class="px-2 text-white font-weight-bold">0</span>
                 <!-- soon -->
-                <div class="top-cart-content arrow_box" style="display: none;">
-                    <div class="actions">
+                <div class="cart-items position-fixed w-25 bg-white shadow-lg px-4 py-3" style="">
+                    <div class="actions mb-5">
                         <a class="btn-checkout" href="https://wagdystores.com/checkout" type="button"><span>checkout</span></a>
-                        <a href="https://wagdystores.com/cart" class="view-cart" type="button"><span>View Cart</span></a>
+                        <a href="./shopping-cart.html" class="view-cart" type="button"><span>View Cart</span></a>
                     </div>
-                    <ul id="cart-sidebar" class="mini-products-list">
-                        
-                    </ul>
-                    <h2 id="no_products_in_cart">No Products In Cart</h2>
-                    <div class="top-subtotal">
-                        SubTotal : <span id="top-subtotal " class="price subtotal_cal">0</span> EGP
+                    <h4 id="no_products_in_cart" class="py-2 border-bottom">No Products In Cart</h4>
+                    <div class="top-subtotal font-weight-bold">
+                        SubTotal : <span id="top-subtotal " class="price subtotal_cal text-danger">0</span> EGP
                     </div>
                 </div>
                 <!-- soon -->
@@ -205,38 +191,62 @@
       <div class="container">
         <!-- <a class="navbar-brand t" href="#">Categories</a> -->
         <div class="menu-control position-relative">
-            <a class="navbar-brand text-white m-0" href="#"><span class="pl-3 pr-5"><i class="fas fa-bars pr-2"></i>Categories</span></a>
-            <div class="menu-items position-absolute text-success py-4 bg-primary">
-                <div class="">
-                    <a href="">TVs & Audio System</a>
+            <a class="navbar-brand text-dark m-0" href="#"><span class="pl-3 pr-5"><i class="fas fa-bars pr-2"></i>Categories</span></a>
+            <div class="menu-items position-fixed py-5 bg-white shadow-lg">
+              <div class="container bg-white">
+                <div class="row">
+                  <div class="col">
+                      <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
+                      <ul class="list-group">
+                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                      </ul>
+                  </div>
+                  <div class="col">
+                    <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
                     <ul class="list-group">
-                        <li class="list-group-item border-0">d</li>
-                        <li class="list-group-item border-0">Ds</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">Vestibulum at eros</li>
-                        </ul>
-                </div>
-                <div class="">
-                    <a href="">TVs & Audio System</a>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
                     <ul class="list-group">
-                        <li class="list-group-item border-0">d</li>
-                        <li class="list-group-item border-0">Ds</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">Vestibulum at eros</li>
-                        </ul>
-                </div>
-                <div class="">
-                    <a href="">TVs & Audio System</a>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
                     <ul class="list-group">
-                        <li class="list-group-item border-0">d</li>
-                        <li class="list-group-item border-0">Ds</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">s</li>
-                        <li class="list-group-item border-0">Vestibulum at eros</li>
-                        </ul>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                    </ul>
+                  </div>
+                  <div class="col">
+                    <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
+                    <ul class="list-group">
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                        <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                    </ul>
+                  </div>
                 </div>
+              </div>
             </div>
         </div>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div id="main-nav"></div>
+
+    <!-- breadcrumbs -->
+    <section class="bg-light py-2">
+        <div class="container">
+            <div>
+                <span class="h6 text-capitalize">home</span>
+                <i class="fas fa-caret-right px-2"></i>
+                <span class="h6 text-danger text-capitalize">shopping cart</span>
+            </div>
+        </div>
+    </section>
+    <!-- breadcrumbs -->
+    
+    <!-- shopping cart -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-12">
+                    <table class="table table-striped cart">
+                        <thead>
+                          <tr>
+                            <th scope="col">Product</th>
+                            <th scope="col" class="">Option</th>
+                            <th scope="col" class="">Unit Price</th>
+                            <th scope="col" class="text-center">Quantity</th>
+                            <th scope="col" class="text-right">Total</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <th scope="row">
+                                <img class="img-fluid" width="80" src="img/display.jpeg" alt="display">
+                                <span class="px-3 text-capatlize">product name</span>
+                            </th>
+                            <td></td>
+                            <td><span class="pl-sm-0 pl-md-4 h5">$1459</span></td>
+                            <td class="qty text-center">
+                                <button class="btn btn-danger minus mb-sm-2 mb-md-0"><i class="fa fa-minus"></i></button>
+                                <input type="number" class="btn btn-default border border-dark d-sm-block d-md-inline m-auto" value="0">
+                                <button class="btn btn-primary plus mt-sm-2 mt-md-0"><i class="fa fa-plus"></i></button>
+                            </td>
+                            <td class="text-right h5">$1459</td>
+                          </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <!-- checkout and discount code -->
+            <div class="row">
+                <div class="col-md-12 d-flex justify-content-md-end">
+                    <form method="POST" class="w-25">
+                        <input type="number" class="form-control mb-3" id="code" aria-describedby="" placeholder="Discount code">
+                        <button type="submit" class="btn btn-dark btn-block">Apply</button>
+                        <!-- <div class="row">
+                            <div class="form-group col-md-8 pr-sm-3 pr-md-0">
+                                <input type="number" class="form-control" id="code" aria-describedby="" placeholder="Discount code">
+                            </div>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn btn-dark btn-block">Apply</button>
+                            </div>
+                        </div> -->
+                    </form>
+                </div>
+                <div class="col-md-12 d-flex justify-content-md-end align-items-baseline pt-4">
+                    <div class="sub-total w-25 text-right">
+                        <label for="" class="text-uppercase h6">sub total</label>
+                        <p class="h1 m-0">$154881</p>
+                    </div>
+                </div>
+                <div class="col-md-12 d-flex justify-content-md-end checkout">
+                    <div class="w-25">
+                        <input type="number" class="form-control invisible" id="code" aria-describedby="" placeholder="Discount code">
+                        <button type="submit" class="btn btn-primary btn-block text-uppercase">chechout</button>
+                    </div>
+                </div>
+            </div>
+            <!-- checkout and discount code -->
+        </div>
+    </section>
+    <!-- shopping cart -->
+
+    <div id="footer"></div>
+
+
+    <script src="js/load.js"></script>
+    <script src="js/main-coding.js"></script>
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+</body>
+</html>

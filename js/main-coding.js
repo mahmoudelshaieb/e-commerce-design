@@ -31,7 +31,9 @@ $(document).ready(function () {
     // $.getJSON("js/data.json").done(function(data) {
     //     displayedData = data
     //     listItems(displayedData);
-    // })
+    // }) 
+
+
 
     $('#login').on('click', function() {
         $(this).addClass('active');
@@ -113,17 +115,6 @@ $(document).ready(function () {
         $('.image-product img').attr('src', $(this).data('image'));
         $('.image-product img').attr('data-zoom', $(this).data('image'));
     });
-
-
-
-    // zoom product images
-    $('.image-zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            url: $(this).find('img').attr('data-zoom')
-        });
 
     
 
@@ -253,5 +244,20 @@ $(document).ready(function () {
         $('.review .five i:nth-child(1), .review .five i:nth-child(2), .review .five i:nth-child(3), .review .five i:nth-child(4), .review .five i:nth-child(5)').addClass('text-warning');
     })
     // make review
+
+
+
+
+
+    // zoom product images
+    $('.image-zoom')
+        .wrap('<span style="display:inline-block"></span>')
+        .css('display', 'block')
+        .parent()
+        .zoom({
+            url: $(this).find('img').attr('data-zoom')
+        });
+
+
 
 });
