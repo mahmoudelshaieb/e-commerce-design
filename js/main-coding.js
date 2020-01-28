@@ -1,6 +1,50 @@
 $(document).ready(function () {
     'use strict';
 
+    // set primary nav fixed when scroll
+    $(window).scroll(function() {
+        if($(window).scrollTop() > 16) {
+            $('#primary-nav').addClass('position-fixed w-100');
+            $('#primary-nav').css({
+                'z-index': '101',
+                'top': 0
+            })
+            $('.menu-control > a span').css({
+                'padding-top': '1rem',
+                'padding-bottom': '1.2rem',
+                'border-radius': '6px'
+            })
+        }else {
+            $('#primary-nav').removeClass('position-fixed w-100');
+            $('.menu-control > a span').css({
+                'padding-top': '0.94rem',
+                'padding-bottom': '1rem',
+                'border-radius': '0'
+            })
+        }
+    })
+    // set primary nav fixed when scroll
+
+    // scroll to top
+    var toTop = $('.scroll-to-top');
+    $(window).scroll(function () {
+        if ($(window).scrollTop() > 80) {
+            if (toTop.is(':hidden')) {
+                toTop.fadeIn(500);
+            }
+        }else {
+            toTop.fadeOut(500);
+        }
+    });
+
+    toTop.click(function (e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: 0
+        }, 700);
+    });
+    // scroll to top
+
     // var url = new URL(window.location.href);
     // var page = url.searchParams.get('page');
 
@@ -31,8 +75,18 @@ $(document).ready(function () {
     // $.getJSON("js/data.json").done(function(data) {
     //     displayedData = data
     //     listItems(displayedData);
-    // }) 
+    // })
 
+    $(window).load(function() {
+        $('.flexslider').flexslider({
+            animation: "slide",
+            easing: "swing",
+            slideshowSpeed: 2000,
+            animationSpeed: 600,
+            // controlsContainer: $(".custom-controls-container"),
+            customDirectionNav: $(".custom-navigation a")
+        });
+    });
 
 
     $('#login').on('click', function() {
@@ -47,9 +101,19 @@ $(document).ready(function () {
         $('#login-c').hide();
         $('#register-c').show();
     })
-
+    
+    // top-nav overlay
+    $('.top-cat .list-group-item:not(.active)').hover(
+        function() {
+            $('.top-nav-overlay').show()
+        },  function() {
+            $('.top-nav-overlay').hide()
+        }
+    );
+    // top-nav overlay
 
     $('.owl-carousel').owlCarousel({
+        rtl:true,
         loop:true,
         margin:10,
         responsiveClass:true,
@@ -245,9 +309,50 @@ $(document).ready(function () {
     })
     // make review
 
+    // make angle for arrow
+    // if($('.accordion .card-header button').hasClass('collapsed')) {
+    //     $('.accordion .card-header button i').animate({
+    //         'transform': 'rotateZ(0deg)'
+    //     })
+    // }else {
+    //     $('.accordion .card-header button i').animate({
+    //         'transform': 'rotateZ(90deg)'
+    //     })
+    // }
 
+    $('.accordion .card-header button').on('click', function() {
+        if($(this).hasClass('collapsed')) {
+            $(this).next('i').css({
+                transform: 'rotateZ(90deg)'
+            })
+        }else {
+            $(this).next('i').css({
+                transform: 'rotateZ(0deg)'
+            })
+        }
+    })
+    // make angle for arrow
 
+    // list and grid view handler
+    $('.list-view-handler').on('click', function() {
+        $(this).addClass('g-l-view-active').siblings('button').removeClass('g-l-view-active')
+        $('.product-list > div').removeClass('col-sm-12 col-md-6 col-lg-3 col-xl-3')
+        .addClass('col-sm-12 col-md-12 col-lg-12 col-xl-12');
+        $('.product-list .card').addClass('d-flex flex-row')
+        $('.product-list #list-img').addClass('list-img');
+        $('.product-list #list-body button').removeClass('btn-block').addClass('mx-3');
 
+    })
+    $('.grid-view-handler').on('click', function() {
+        $(this).addClass('g-l-view-active').siblings('button').removeClass('g-l-view-active')
+        $('.product-list > div').removeClass('col-sm-12 col-md-12 col-lg-12 col-xl-12')
+        .addClass('col-sm-12 col-md-6 col-lg-3 col-xl-3');
+        $('.product-list .card').removeClass('d-flex flex-row')
+        $('.product-list #list-img').removeClass('list-img');
+        $('.product-list #list-body button').addClass('btn-block').removeClass('mx-3');
+
+    })
+    // list and grid view handler
 
     // zoom product images
     $('.image-zoom')

@@ -1,3 +1,11 @@
+  <!-- scroll to top -->
+<section>
+  <a href="#" class="btn btn-primary rounded-0 px-3 py-2 position-fixed scroll-to-top">
+      <i class="fas fa-chevron-up"></i>
+  </a>
+</section>
+<!-- scroll to top -->
+  
   <!-- secondary nav -->
   <nav class="navbar navbar-expand-lg navbar-light shadow-sm custom-top-nav">
     <div class="container">
@@ -40,7 +48,7 @@
             </ul>
             <div class="font-weight-normal" style="font-size: 13px;">welcome to wagdy store</div>
             <div class="login ml-auto">
-              <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">Login / Register</button>
+              <a type="button" class="" data-toggle="modal" data-target="#exampleModal">Login / Register</a>
             </div>
           </div>
     </div>
@@ -59,7 +67,7 @@
             </div>
           </div>
         </ul>
-        <div class="px-5">
+        <div class="px-5 login-ar-fix">
           <div id="register-c" style="display: none;">
             <h6 class="m-0 pb-5 text-right"><span class="text-danger pr-2">*</span>Required</h6>
             <form method="POST">
@@ -149,7 +157,7 @@
   <!-- modal for login and register -->
 
   <!-- main actions -->
-  <header class="py-4">
+  <header class="pt-2">
       <div class="container">
         <div class="row align-items-baseline">
             <div class="col-sm-12 col-md-2 col-lg-2 col-xl-2">
@@ -164,30 +172,33 @@
               </form>
           </div>
           <div class="col-sm-12 col-md-3 col-lg-3 col-xl-3">
-              <div class="cart-control position-relative py-2 px-2 ml-4 text-center">
-                <a href="#" class="text-white font-weight-bold"><i class="fas fa-shopping-cart pl-2"></i>Veiw Cart</a>
-                <span class="px-2 text-white font-weight-bold">0</span>
-                <!-- soon -->
-                <div class="cart-items position-fixed w-25 bg-white shadow-lg px-4 py-3" style="">
-                    <div class="actions mb-5">
-                        <a class="btn-checkout" href="https://wagdystores.com/checkout" type="button"><span>checkout</span></a>
-                        <a href="./shopping-cart.html" class="view-cart" type="button"><span>View Cart</span></a>
-                    </div>
-                    <h4 id="no_products_in_cart" class="py-2 border-bottom">No Products In Cart</h4>
-                    <div class="top-subtotal font-weight-bold">
-                        SubTotal : <span id="top-subtotal " class="price subtotal_cal text-danger">0</span> EGP
-                    </div>
+            <div class="row">
+              <div class="col">
+                <div class="cart-control position-relative py-2 px-2 ml-4 mb-4 text-center">
+                  <a href="#" class="text-white font-weight-bold"><i class="fas fa-shopping-cart pl-2"></i>Veiw Cart</a>
+                  <span class="px-2 text-white font-weight-bold">0</span>
+                  <!-- soon -->
+                  <div class="cart-items position-fixed w-25 bg-white shadow-lg px-4 py-3" style="">
+                      <div class="actions mb-5">
+                          <a class="btn-checkout" href="https://wagdystores.com/checkout" type="button"><span>checkout</span></a>
+                          <a href="./shopping-cart.html" class="view-cart" type="button"><span>View Cart</span></a>
+                      </div>
+                      <h4 id="no_products_in_cart" class="py-2 border-bottom">No Products In Cart</h4>
+                      <div class="top-subtotal font-weight-bold">
+                          SubTotal : <span id="top-subtotal " class="price subtotal_cal text-danger">0</span> EGP
+                      </div>
+                  </div>
+                  <!-- soon -->
                 </div>
-                <!-- soon -->
               </div>
-
+            </div>
           </div>
         </div>
       </div>
   </header>
 
   <!-- primary nav -->
-  <nav class="navbar navbar-expand-lg navbar-light nav-categories text-uppercase py-0">
+  <nav id="primary-nav" class="navbar navbar-expand-lg navbar-light nav-categories text-uppercase py-0">
       <div class="container">
         <!-- <a class="navbar-brand t" href="#">Categories</a> -->
         <div class="menu-control position-relative">
@@ -196,13 +207,13 @@
               <div class="container bg-white">
                 <div class="row">
                   <div class="col">
-                      <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="#">TVs & Audio System</a>
+                      <a class="bg-light py-2 px-3 font-weight-bold text-dark" href="./product-category.html">TVs & Audio System</a>
                       <ul class="list-group">
-                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
-                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
-                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
-                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
-                          <li class="list-group-item border-0 pb-0"><a href="#"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="./product-category.html"><i class="fas fa-angle-right pr-2"></i>Washing Machines</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="./product-category.html"><i class="fas fa-angle-right pr-2"></i>Freestanding Cooker</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="./product-category.html"><i class="fas fa-angle-right pr-2"></i>Deep Frather</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="./product-category.html"><i class="fas fa-angle-right pr-2"></i>Fredge</a></li>
+                          <li class="list-group-item border-0 pb-0"><a href="./product-category.html"><i class="fas fa-angle-right pr-2"></i>Water coolers</a></li>
                       </ul>
                   </div>
                   <div class="col">
