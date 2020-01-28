@@ -83,6 +83,8 @@ $(document).ready(function () {
             easing: "swing",
             slideshowSpeed: 2000,
             animationSpeed: 600,
+            useCSS: true,
+            touch: true, 
             // controlsContainer: $(".custom-controls-container"),
             customDirectionNav: $(".custom-navigation a")
         });
