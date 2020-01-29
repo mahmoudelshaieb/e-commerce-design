@@ -105,6 +105,33 @@ $(document).ready(function () {
         $('#login-c').hide();
         $('#register-c').show();
     })
+
+    $('#visa').on('click', function() {
+        $(this).addClass('active');
+        $('#paypal').removeClass('active');
+        $('#master-card').removeClass('active');
+        $('#visa-c').show();
+        $('#paypal-c').hide();
+        $('#master-card-c').hide();
+    })
+
+    $('#paypal').on('click', function() {
+        $(this).addClass('active');
+        $('#visa').removeClass('active');
+        $('#master-card').removeClass('active');
+        $('#visa-c').hide();
+        $('#paypal-c').show();
+        $('#master-card-c').hide();
+    })
+
+    $('#master-card').on('click', function() {
+        $(this).addClass('active');
+        $('#visa').removeClass('active');
+        $('#paypal').removeClass('active');
+        $('#visa-c').hide();
+        $('#paypal-c').hide();
+        $('#master-card-c').show();
+    })
     
     // top-nav overlay
     $('.top-cat .list-group-item:not(.active)').hover(
@@ -201,8 +228,11 @@ $(document).ready(function () {
     // Make Steppers Control in action
     var product_d_qty = 0;
     var unitPrice = 1459;
-    var total;
-    var subtotal;
+    var total = 1;
+    var subtotal = 0;
+    var dicountCode;
+    var remPriceAfterDiscount = 0;
+
     if(product_d_qty===0) {
         $('.qty .minus').attr('disabled', true);
     }
@@ -234,6 +264,24 @@ $(document).ready(function () {
         }
     })
     // Make Steppers Control in action
+
+    // cart discount operation
+    $('#discount-code').on('keyup', function() {
+        if($('#discount-code').val()=="") {
+            $('#discount-code-btn').attr('disabled', true);
+        }else {
+            $('#discount-code-btn').attr('disabled', false);
+        }
+    })
+    $('#discount-code-btn').click(function(e) {
+        e.preventDefault();
+        dicountCode = $('#discount-code').val();
+        remPriceAfterDiscount = subtotal * (dicountCode/100)
+        subtotal -= remPriceAfterDiscount;
+        $('.subtotal span').html(subtotal.toFixed(2));
+        $('.subtotal').addClass('animated tada');
+    })
+    // cart discount operation
 
     // switch between details
     $('#more-d').on('click', function() {
@@ -347,6 +395,12 @@ $(document).ready(function () {
         }
     })
     // make angle for arrow
+
+    // real time slider
+    $('input[type="range"]').on('change mousemove', function() {
+        $('#filte-by-price').attr('value', $(this).val());
+    })
+    // real time slider
 
     // list and grid view handler
     $('.list-view-handler').on('click', function() {

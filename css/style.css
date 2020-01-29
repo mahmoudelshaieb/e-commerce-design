@@ -689,6 +689,10 @@ input[type=number] {
     color: #FFC107;
 }
 
+#customer-reviews .progress.rounded-pill {
+    margin-bottom: 0.8rem;
+}
+
 .opacity-normal {
     opacity: .3;
 }
@@ -765,6 +769,20 @@ input[type=number] {
 
 .g-l-view-active:hover {
     color: #FFF;
+}
+
+.page-item.active .page-link {
+    background-color: #007fb8;
+    border-color: #007fb8;
+}
+
+#filte-by-price {
+    font-size: 1.7rem;
+    letter-spacing: 2px;
+}
+
+input[type="range"] {
+    cursor: pointer;
 }
 
 /* list view */

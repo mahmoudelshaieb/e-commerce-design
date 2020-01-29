@@ -1,4 +1,8 @@
 
+#login-c button.btn.btn-primary.text-capitalize.px-4 {
+    padding-left: 1.5rem !important;
+}
+
 
 button.btn.btn-success.my-2.my-sm-0.px-4.position-absolute.rounded-pill {
     right: 592px;
@@ -120,4 +124,14 @@ button.btn.btn-info.rounded-0.font-weight-bold.px-4 {
     .news button.btn.btn-primary.btn-block.mb-3.font-weight-bold {
         margin-right: .5rem;
     }
+}
+
+/* fix checkout */
+.modal-content.pb-5.rounded-0.border-0.px-5.py-5.ar-fix-check,
+.ar-fix-check .process-arfix {
+    padding-left: 3rem !important
+}
+
+.ar-fix-check .form-group.mx-auto {
+    margin-left: auto !important
 }

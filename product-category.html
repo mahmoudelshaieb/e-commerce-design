@@ -81,10 +81,14 @@
                                 <form>
                                     <div class="form-group">
                                       <label for="filte-by-price">Filter By Price                                    </label>
-                                      <input type="number" class="form-control" id="filte-by-price" aria-describedby="">
+                                      <input type="number" class="form-control font-weight-bold text-center" id="filte-by-price" aria-describedby="" value="25000">
                                     </div>
-                                    <input type="range" class="form-control-range mb-3 mt-5" id="formControlRange">
-                                    <button type="submit" class="btn btn-primary">Search</button>
+                                    <div class="d-flex pb-4">
+                                        <label for="" class="pr-2">0</label>
+                                        <input type="range" class="form-control-range mb-3" id="formControlRange" min="0" max="50000" step="1">
+                                        <label for="" class="pl-2">50000</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary btn-block">Search</button>
                                   </form>
                             </div>
                           </div>
@@ -306,6 +310,30 @@
         </div>
     </section>
     <!-- main category -->
+
+    <!-- pagination -->
+    <section class="">
+        <div class="container">
+            <div class="row flex-row-reverse">
+                <nav aria-label="">
+                    <ul class="pagination pagination-sm">
+                        <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
+                        </li>
+                        <li class="page-item active" aria-current="page">
+                            <a class="page-link" href="#">1 <span class="sr-only">(current)</span></a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </section>
+    <!-- pagination -->
 
     <div id="footer"></div>
 
