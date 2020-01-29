@@ -81,10 +81,12 @@ $(document).ready(function () {
         $('.flexslider').flexslider({
             animation: "slide",
             easing: "swing",
+            smoothHeight: true,
+            slideshow: true,
             slideshowSpeed: 2000,
             animationSpeed: 600,
             useCSS: true,
-            touch: true, 
+            touch: true,
             // controlsContainer: $(".custom-controls-container"),
             customDirectionNav: $(".custom-navigation a")
         });
@@ -198,12 +200,19 @@ $(document).ready(function () {
 
     // Make Steppers Control in action
     var product_d_qty = 0;
+    var unitPrice = 1459;
+    var total;
+    var subtotal;
     if(product_d_qty===0) {
         $('.qty .minus').attr('disabled', true);
     }
 
     $('.qty .plus').on('click', function() {
         product_d_qty +=1;
+        total = unitPrice * product_d_qty;
+        $('.total span').html(total)
+        subtotal = total;
+        $('.subtotal span').html(subtotal)
         $('.qty input').attr('value', product_d_qty);
         if(product_d_qty<=0) {
             $('.qty .minus').attr('disabled', true);
@@ -213,6 +222,10 @@ $(document).ready(function () {
     })
     $('.qty .minus').on('click', function() {
         product_d_qty -=1;
+        total = unitPrice * product_d_qty;
+        $('.total span').html(total)
+        subtotal = total;
+        $('.subtotal span').html(subtotal)
         $('.qty input').attr('value', product_d_qty);
         if(product_d_qty<=0) {
             $(this).attr('disabled', true);
