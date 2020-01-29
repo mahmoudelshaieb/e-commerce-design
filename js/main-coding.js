@@ -77,21 +77,20 @@ $(document).ready(function () {
     //     listItems(displayedData);
     // })
 
-    $(window).load(function() {
-        $('.flexslider').flexslider({
-            animation: "slide",
-            easing: "swing",
-            smoothHeight: true,
-            slideshow: true,
-            slideshowSpeed: 2000,
-            animationSpeed: 600,
-            useCSS: true,
-            touch: true,
-            // controlsContainer: $(".custom-controls-container"),
-            customDirectionNav: $(".custom-navigation a")
-        });
-    });
-
+    // $(window).load(function() {
+    //     $('.flexslider').flexslider({
+    //         animation: "slide",
+    //         easing: "swing",
+    //         smoothHeight: true,
+    //         slideshow: true,
+    //         slideshowSpeed: 2000,
+    //         animationSpeed: 600,
+    //         useCSS: true,
+    //         touch: true,
+    //         // controlsContainer: $(".custom-controls-container"),
+    //         customDirectionNav: $(".custom-navigation a")
+    //     });
+    // });
 
     $('#login').on('click', function() {
         $(this).addClass('active');
