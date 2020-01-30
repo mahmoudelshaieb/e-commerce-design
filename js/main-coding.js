@@ -304,12 +304,12 @@ $(document).ready(function () {
     // switch between details
 
     // make review
-    $('.review .one').on('click', function() {
+    $('.review .one div').on('click', function() {
         $(this).removeClass('opacity-normal');
-        $('.review .two').addClass('opacity-normal');
-        $('.review .three').addClass('opacity-normal');
-        $('.review .four').addClass('opacity-normal');
-        $('.review .five').addClass('opacity-normal');
+        $('.review .two div').addClass('opacity-normal');
+        $('.review .three div').addClass('opacity-normal');
+        $('.review .four div').addClass('opacity-normal');
+        $('.review .five div').addClass('opacity-normal');
 
         $('.review .one i:nth-child(1)').addClass('text-warning');
         $('.review .two i:nth-child(1), .review .two i:nth-child(2)').removeClass('text-warning');
@@ -317,12 +317,12 @@ $(document).ready(function () {
         $('.review .four i:nth-child(1), .review .four i:nth-child(2), .review .four i:nth-child(3), .review .four i:nth-child(4)').removeClass('text-warning');
         $('.review .five i:nth-child(1), .review .five i:nth-child(2), .review .five i:nth-child(3), .review .five i:nth-child(4), .review .five i:nth-child(5)').removeClass('text-warning');
     })
-    $('.review .two').on('click', function() {
+    $('.review .two div').on('click', function() {
         $(this).removeClass('opacity-normal');
-        $('.review .one').addClass('opacity-normal');
-        $('.review .three').addClass('opacity-normal');
-        $('.review .four').addClass('opacity-normal');
-        $('.review .five').addClass('opacity-normal');
+        $('.review .one div').addClass('opacity-normal');
+        $('.review .three div').addClass('opacity-normal');
+        $('.review .four div').addClass('opacity-normal');
+        $('.review .five div').addClass('opacity-normal');
 
         $('.review .one i:nth-child(1)').removeClass('text-warning');
         $('.review .two i:nth-child(1), .review .two i:nth-child(2)').addClass('text-warning');
@@ -330,12 +330,12 @@ $(document).ready(function () {
         $('.review .four i:nth-child(1), .review .four i:nth-child(2), .review .four i:nth-child(3), .review .four i:nth-child(4)').removeClass('text-warning');
         $('.review .five i:nth-child(1), .review .five i:nth-child(2), .review .five i:nth-child(3), .review .five i:nth-child(4), .review .five i:nth-child(5)').removeClass('text-warning');
     })
-    $('.review .three').on('click', function() {
+    $('.review .three div').on('click', function() {
         $(this).removeClass('opacity-normal');
-        $('.review .two').addClass('opacity-normal');
-        $('.review .one').addClass('opacity-normal');
-        $('.review .four').addClass('opacity-normal');
-        $('.review .five').addClass('opacity-normal');
+        $('.review .two div').addClass('opacity-normal');
+        $('.review .one div').addClass('opacity-normal');
+        $('.review .four div').addClass('opacity-normal');
+        $('.review .five div').addClass('opacity-normal');
 
         $('.review .one i:nth-child(1)').removeClass('text-warning');
         $('.review .two i:nth-child(1), .review .two i:nth-child(2)').removeClass('text-warning');
@@ -343,12 +343,12 @@ $(document).ready(function () {
         $('.review .four i:nth-child(1), .review .four i:nth-child(2), .review .four i:nth-child(3), .review .four i:nth-child(4)').removeClass('text-warning');
         $('.review .five i:nth-child(1), .review .five i:nth-child(2), .review .five i:nth-child(3), .review .five i:nth-child(4), .review .five i:nth-child(5)').removeClass('text-warning');
     })
-    $('.review .four').on('click', function() {
+    $('.review .four div').on('click', function() {
         $(this).removeClass('opacity-normal');
-        $('.review .two').addClass('opacity-normal');
-        $('.review .three').addClass('opacity-normal');
-        $('.review .one').addClass('opacity-normal');
-        $('.review .five').addClass('opacity-normal');
+        $('.review .two div').addClass('opacity-normal');
+        $('.review .three div').addClass('opacity-normal');
+        $('.review .one div').addClass('opacity-normal');
+        $('.review .five div').addClass('opacity-normal');
 
         $('.review .one i:nth-child(1)').removeClass('text-warning');
         $('.review .two i:nth-child(1), .review .two i:nth-child(2)').removeClass('text-warning');
@@ -356,12 +356,12 @@ $(document).ready(function () {
         $('.review .four i:nth-child(1), .review .four i:nth-child(2), .review .four i:nth-child(3), .review .four i:nth-child(4)').addClass('text-warning');
         $('.review .five i:nth-child(1), .review .five i:nth-child(2), .review .five i:nth-child(3), .review .five i:nth-child(4), .review .five i:nth-child(5)').removeClass('text-warning');
     })
-    $('.review .five').on('click', function() {
+    $('.review .five div').on('click', function() {
         $(this).removeClass('opacity-normal');
-        $('.review .two').addClass('opacity-normal');
-        $('.review .three').addClass('opacity-normal');
-        $('.review .four').addClass('opacity-normal');
-        $('.review .one').addClass('opacity-normal');
+        $('.review .two div').addClass('opacity-normal');
+        $('.review .three div').addClass('opacity-normal');
+        $('.review .four div').addClass('opacity-normal');
+        $('.review .one div').addClass('opacity-normal');
 
         $('.review .one i:nth-child(1)').removeClass('text-warning');
         $('.review .two i:nth-child(1), .review .two i:nth-child(2)').removeClass('text-warning');
@@ -408,6 +408,7 @@ $(document).ready(function () {
         .addClass('col-sm-12 col-md-12 col-lg-12 col-xl-12');
         $('.product-list .card').addClass('d-flex flex-row')
         $('.product-list #list-img').addClass('list-img');
+        $('.product-list #list-img').removeClass('fix-height-grid');
         $('.product-list #list-body button').removeClass('btn-block').addClass('mx-3');
 
     })
@@ -417,19 +418,11 @@ $(document).ready(function () {
         .addClass('col-sm-12 col-md-6 col-lg-3 col-xl-3');
         $('.product-list .card').removeClass('d-flex flex-row')
         $('.product-list #list-img').removeClass('list-img');
+        $('.product-list #list-img').addClass('fix-height-grid');
         $('.product-list #list-body button').addClass('btn-block').removeClass('mx-3');
 
     })
     // list and grid view handler
-
-    // zoom product images
-    $('.image-zoom')
-        .wrap('<span style="display:inline-block"></span>')
-        .css('display', 'block')
-        .parent()
-        .zoom({
-            url: $(this).find('img').attr('data-zoom')
-        });
 
 
 

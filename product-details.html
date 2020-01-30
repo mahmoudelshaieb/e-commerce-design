@@ -83,15 +83,15 @@
                         <li class="list-inline-item rounded-lg shadow-sm"></li>
                     </ul>
                     <div class="row align-items-end">
-                        <div class="col">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-2">
                             <h5 class="text-capitalize m-0 py-2">quantity</h5>
-                            <div class="px-4 qty pt-2">
+                            <div class="px-4 qty pt-2 mb-2">
                                 <button class="btn btn-danger rounded-0 minus"><i class="fa fa-minus"></i></button>
                                 <input type="number" class="btn btn-default rounded-0 border border-dark w-25" value="0">
                                 <button class="btn btn-primary plus"><i class="fa fa-plus"></i></button>
                             </div>
                         </div>
-                        <div class="col">
+                        <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-3">
                             <button class="btn btn-primary btn-block font-weight-bold text-uppercase py-2 cart-btn"><i class="fas fa-shopping-cart pl-2"></i>add to cart</button>
                         </div>
                     </div>
@@ -135,40 +135,55 @@
                     <div class="col-sm-12 col-md-5 col-lg-5 col-xl-5">
                         <div class="review mb-5">
                             <h4 class="text-capitalize pb-4">write your own review</h4>
-                            <div class="one py-1 opacity-normal">
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
+                            <div class="one py-1">
+                                <div class="d-inline-block opacity-normal">
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                </div>
+                                <span class="px-2 text-center">1</span>
                             </div>
-                            <div class="two py-1 opacity-normal">
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
+                            <div class="two py-1">
+                                <div class="d-inline-block opacity-normal">
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                </div>
+                                <span class="px-2 text-center">2</span>
                             </div>
-                            <div class="three py-1 opacity-normal">
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
+                            <div class="three py-1">
+                                <div class="d-inline-block opacity-normal">
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                </div>
+                                <span class="px-2 text-center">3</span>
                             </div>
-                            <div class="four py-1 opacity-normal">
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
+                            <div class="four py-1">
+                                <div class="d-inline-block opacity-normal">
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                </div>
+                                <span class="px-2 text-center">4</span>
                             </div>
-                            <div class="five py-1 opacity-normal">
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
-                                <i class="fas fa-star pr-2"></i>
+                            <div class="five py-1">
+                                <div class="d-inline-block opacity-normal">
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                    <i class="fas fa-star pr-2"></i>
+                                </div>
+                                <span class="px-2 text-center">5</span>
                             </div>
                         </div>
                     </div>
@@ -393,5 +408,16 @@
     <script src="js/jquery-1.11.2.min.js"></script>
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/jquery.zoom.min.js"></script>
+
+    <!-- zoom product images -->
+    <script>
+      $('.image-zoom')
+        .wrap('<span style="display:inline-block"></span>')
+        .css('display', 'block')
+        .parent()
+        .zoom({
+            url: $(this).find('img').attr('data-zoom')
+        });
+    </script>
 </body>
 </html>

@@ -9,6 +9,19 @@ body {
     background-color: #007fb8;
 }
 
+@media (min-width: 320px) and (max-width: 414px) {
+    .menu-items.position-fixed.py-5.bg-white.shadow-lg {
+        max-height: 156px;
+        overflow: scroll;
+    }
+    a.btn-checkout {
+        margin-bottom: 0.8rem;
+    }
+    a.view-cart {
+        margin-bottom: 0.8rem;
+    }
+}
+
 @media(max-width: 574px) {
     button.btn.btn-success.my-2.my-sm-0.px-4.position-absolute.rounded-pill {
         top: -8px;
@@ -157,7 +170,7 @@ body {
     text-align: left;
     cursor: pointer;
     text-decoration: none;
-    float: right;
+    /* float: right; */
     transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
     border: 1px solid #007fb8;
     font-weight: bold;
@@ -178,7 +191,7 @@ body {
     text-align: left;
     cursor: pointer;
     text-decoration: none;
-    float: left;
+    /* float: left; */
     transition: color 300ms ease-in-out 0s, background-color 300ms ease-in-out 0s, background-position 300ms ease-in-out 0s;
     border: 1px solid #e0bc27;
     font-weight: bold;
@@ -387,6 +400,10 @@ ol.flex-control-nav.flex-control-paging {
 
 .current-price {
     color: hsl(199, 100%, 45%);
+}
+
+.offers img {
+    max-height: 135px;
 }
 
 .cart-btn {
@@ -659,6 +676,18 @@ input[type=number] {
     font-size: 20px;
 }
 
+.opacity-normal {
+    opacity: .5;
+}
+
+.review .one:hover .opacity-normal,
+.review .two:hover .opacity-normal,
+.review .three:hover .opacity-normal,
+.review .four:hover .opacity-normal,
+.review .five:hover .opacity-normal {
+    opacity: 1;
+}
+
 .review .one:hover i:nth-child(1) {
     color: #FFC107;
 }
@@ -693,9 +722,7 @@ input[type=number] {
     margin-bottom: 0.8rem;
 }
 
-.opacity-normal {
-    opacity: .3;
-}
+
 
 .cart td {
     vertical-align: middle;
@@ -744,6 +771,10 @@ input[type=number] {
     transform: rotateZ(0deg);
 }
 /* category details */
+
+.fix-height-grid img {
+    max-height: 120px;
+}
 
 /* list view */
 .list-img {
