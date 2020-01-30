@@ -20,11 +20,18 @@ body {
     a.view-cart {
         margin-bottom: 0.8rem;
     }
+    .fix-width {
+        overflow: scroll;
+    }
+    .checkout-fix-mob {
+        width: 100% !important;
+    }
 }
 
 @media(max-width: 574px) {
     button.btn.btn-success.my-2.my-sm-0.px-4.position-absolute.rounded-pill {
         top: -8px;
+        right: 16px;
     }
 }
 

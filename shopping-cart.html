@@ -41,7 +41,7 @@
     <section class="py-5">
         <div class="container">
             <div class="row justify-content-center">
-                <div class="col-md-12">
+                <div class="col-md-12 fix-width">
                     <table class="table table-striped cart">
                         <thead>
                           <tr>
@@ -58,7 +58,7 @@
                                 <img class="img-fluid" width="80" src="img/display.jpeg" alt="display">
                                 <span class="px-3 text-capatlize">product name</span>
                             </th>
-                            <td></td>
+                            <td>option</td>
                             <td><span class="pl-sm-0 pl-md-4 h5">$1459</span></td>
                             <td class="qty text-center">
                                 <button class="btn btn-danger minus rounded-0 mb-sm-2 mb-md-0"><i class="fa fa-minus"></i></button>
@@ -73,8 +73,8 @@
             </div>
             <!-- checkout and discount code -->
             <div class="row py-5">
-                <div class="col-md-12 d-flex justify-content-md-end">
-                    <form method="POST" class="w-25">
+                <div class="col-md-12 d-flex justify-content-sm-center justify-content-md-end">
+                    <form method="POST" class="w-25 checkout-fix-mob">
                         <input type="number" class="form-control mb-3" id="discount-code" placeholder="Discount code" value="">
                         <button type="submit" class="btn btn-dark btn-block" id="discount-code-btn" disabled>Apply</button>
                         <!-- <div class="row">
@@ -87,14 +87,14 @@
                         </div> -->
                     </form>
                 </div>
-                <div class="col-md-12 d-flex justify-content-md-end align-items-baseline pt-4">
-                    <div class="sub-total w-25 text-right">
+                <div class="col-md-12 d-flex justify-content-sm-center justify-content-md-end align-items-baseline pt-4">
+                    <div class="sub-total w-25 text-right checkout-fix-mob">
                         <label for="" class="text-uppercase h6">sub total</label>
                         <p class="h1 m-0 subtotal">$<span>0</span></p>
                     </div>
                 </div>
-                <div class="col-md-12 d-flex justify-content-md-end checkout">
-                    <div class="w-25">
+                <div class="col-md-12 d-flex justify-content-sm-center justify-content-md-end checkout">
+                    <div class="w-25 checkout-fix-mob">
                         <input type="number" class="form-control invisible" id="code" aria-describedby="" placeholder="Discount code">
                         <button type="submit" class="btn btn-primary btn-block text-uppercase" data-toggle="modal" data-target="#checkout">chechout</button>
                     </div>
@@ -176,17 +176,17 @@
                 <div class="form-group col-md-12">
                     <span class="text-danger pr-2">*</span>
                   <label for="c-number">Card Number</label>
-                  <input type="number" class="form-control" id="c-number" placeholder="" name="c-number">
+                  <input type="number" class="form-control" id="master-number" placeholder="" name="master-number">
                 </div>
                 <div class="form-group col-md-6">
                     <span class="text-danger pr-2">*</span>
                   <label for="exp-date">Expiration Date</label>
-                  <input type="month" class="form-control" id="exp-date" placeholder="" name="exp-date">
+                  <input type="month" class="form-control" id="master-date" placeholder="" name="master-date">
                 </div>
                 <div class="col-md-6">
                     <span class="text-danger pr-2">*</span>
                     <label for="sec-code">Security Code</label>
-                    <input type="number" class="form-control" id="sec-code" placeholder="" name="sec-code">
+                    <input type="number" class="form-control" id="master-code" placeholder="" name="master-code">
                 </div>
                 <div class="form-group mt-3 mx-auto">
                   <button type="submit" class="btn btn-primary text-uppercase px-4 process-arfix"><i class="fas fa-check pr-2"></i>process</button>

@@ -37,7 +37,7 @@ button.btn.btn-success.my-2.my-sm-0.px-4.position-absolute.rounded-pill {
 
 @media (min-width: 320px) and (max-width: 414px) {
     button.btn.btn-success.my-2.my-sm-0.px-4.position-absolute.rounded-pill {
-        right: 200px;
+        right: 200px !important;
     }
     input.form-control.mr-sm-2.px-4.rounded-pill.mb-4 {
         border: none;
