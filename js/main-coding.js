@@ -1,6 +1,10 @@
 $(document).ready(function () {
     'use strict';
 
+    $('.fix-mob-nav').on('click', function(e) {
+        e.preventDefault();
+    })
+
     // set primary nav fixed when scroll
     $(window).scroll(function() {
         if($(window).scrollTop() > 16) {

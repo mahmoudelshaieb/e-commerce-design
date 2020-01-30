@@ -11,7 +11,7 @@ body {
 
 @media (min-width: 320px) and (max-width: 414px) {
     .menu-items.position-fixed.py-5.bg-white.shadow-lg {
-        max-height: 156px;
+        max-height: 160px;
         overflow: scroll;
     }
     a.btn-checkout {
